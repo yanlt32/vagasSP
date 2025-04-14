@@ -1,13 +1,13 @@
 :root {
-    --primary: #2563eb; /* Azul principal */
-    --primary-dark: #1d4ed8; /* Azul escuro */
-    --secondary: #f59e0b; /* Amarelo */
-    --success: #10b981; /* Verde */
-    --success-dark: #059669; /* Verde escuro */
-    --dark: #1e293b; /* Cinza escuro */
-    --light: #f8fafc; /* Fundo claro */
-    --gray: #94a3b8; /* Cinza para textos secundários */
-    --gray-light: #e2e8f0; /* Cinza claro para bordas/fundos */
+    --primary: #2c3e50;
+    --primary-dark: #1a252f;
+    --secondary: #e74c3c;
+    --success: #27ae60;
+    --success-dark: #219653;
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+    --gray: #95a5a6;
+    --gray-light: #dfe6e9;
 }
 
 * {
@@ -23,7 +23,6 @@ body {
     background-color: var(--light);
 }
 
-/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -32,7 +31,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background-color: var(--primary);
     color: white;
     padding: 20px 0;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -45,6 +44,7 @@ header h1 {
     font-size: 2rem;
     font-weight: 800;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 /* Hamburger Menu */
@@ -108,14 +108,14 @@ nav a:hover {
 
 /* Formulário de Candidatura */
 #form-candidatura {
-    margin: 50px 0;
-    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
 }
 
 #form-candidatura h2 {
-    font-size: 2rem;
     color: var(--primary);
-    margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 20px;
     position: relative;
 }
 
@@ -129,25 +129,46 @@ nav a:hover {
     border-radius: 2px;
 }
 
+.local-info {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--secondary);
+}
+
+.local-info p {
+    margin: 5px 0;
+    color: var(--dark);
+}
+
+.local-info p strong {
+    color: var(--primary);
+}
+
 .form {
     background-color: white;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
 }
 
-.form label {
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
     display: block;
+    margin-bottom: 8px;
     font-weight: 600;
     color: var(--dark);
-    margin-bottom: 8px;
-    margin-top: 15px;
 }
 
-.form input {
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"] {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid var(--gray-light);
@@ -156,69 +177,96 @@ nav a:hover {
     transition: border 0.3s ease;
 }
 
-.form input:focus {
+.form-group input:focus {
     outline: none;
     border-color: var(--primary);
 }
 
-.form .description {
+.form-group .description {
     font-size: 0.9rem;
     color: var(--gray);
-    margin-bottom: 8px;
-    margin-top: -5px;
+    margin-top: 5px;
 }
 
-/* Tooltip para a Senha GOV */
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px dashed var(--gray-light);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+.checkbox label {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.termos-link {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.termos-link:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
 .tooltip {
     position: relative;
     display: inline-block;
-    cursor: pointer;
-    margin-left: 5px;
-    color: var(--primary);
-    font-weight: 700;
+    cursor: help;
 }
 
 .tooltip .tooltip-text {
     visibility: hidden;
-    width: 200px;
+    width: 250px;
     background-color: var(--dark);
     color: white;
     text-align: center;
     border-radius: 6px;
-    padding: 8px;
+    padding: 10px;
     position: absolute;
     z-index: 1;
     bottom: 125%;
     left: 50%;
-    margin-left: -100px;
+    transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s;
-    font-size: 0.85rem;
-    font-weight: 400;
+    font-size: 0.9rem;
+    font-weight: normal;
 }
 
 .tooltip:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
-}
-
-.form .btn {
-    background-color: var(--success);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 20px;
-    transition: all 0.3s ease;
-}
-
-.form .btn:hover {
-    background-color: var(--success-dark);
-    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -229,22 +277,6 @@ footer {
     color: white;
     margin-top: 40px;
 }
-
-/* Animações */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-#form-candidatura {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* centraliza verticalmente */
-    min-height: 100vh;
-    animation: fadeIn 0.5s ease forwards;
-}
-
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -260,7 +292,7 @@ footer {
         display: none;
         flex-direction: column;
         gap: 10px;
-        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        background-color: var(--primary);
         position: absolute;
         top: 70px;
         left: 0;

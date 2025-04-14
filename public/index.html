@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vagas Brasil - Encontre Seu Emprego</title>
+    <title>Vagas São Paulo - Encontre Seu Emprego na Capital</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="styles.css">    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>VAGAS BRASIL</h1>
+            <h1>VAGAS SÃO PAULO</h1>
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -30,42 +31,50 @@
     <!-- Seção de Destaque -->
     <section id="hero" class="container">
         <div class="hero-content">
-            <h2>Encontre o Emprego dos Seus Sonhos</h2>
-            <p>Milhares de vagas atualizadas diariamente em todo o Brasil.</p>
-            <input type="text" id="busca" placeholder="Pesquise por cargo ou cidade...">
+            <h2>Encontre Vagas Exclusivas em São Paulo</h2>
+            <p>As melhores oportunidades na capital paulista, atualizadas diariamente.</p>
+            <input type="text" id="busca" placeholder="Pesquise por cargo ou região...">
             <button onclick="buscarVagas()" class="btn-buscar">Buscar</button>
-            <p><a href="todas-vagas.html" class="link-todas-vagas">Ver todas as vagas disponíveis</a></p>
+            <p><a href="todas-vagas.html" class="link-todas-vagas">Ver todas as vagas em SP</a></p>
         </div>
     </section>
 
     <!-- Seção de Vagas Disponíveis -->
     <section id="vagas" class="container">
-        <h2>Vagas em Destaque</h2>
+        <h2>Vagas em Destaque em São Paulo</h2>
         <div id="lista-vagas">
             <div class="vaga" data-categoria="tecnologia">
-                <h3>Desenvolvedor Front-End</h3>
-                <p><strong>Empresa:</strong> Tech Solutions</p>
-                <p><strong>Localização:</strong> São Paulo, SP</p>
-                <p><strong>Salário:</strong> R$ 5.000,00</p>
-                <p>Desenvolvimento de interfaces web com React e CSS. Experiência de 2 anos requerida.</p>
+                <h3>Desenvolvedor Full Stack</h3>
+                <p><strong>Empresa:</strong> SP Tech Innovations</p>
+                <p><strong>Localização:</strong> Paulista, São Paulo</p>
+                <p><strong>Salário:</strong> R$ 7.500,00</p>
+                <p>Desenvolvimento de aplicações web completas. Experiência com Node.js e React requerida.</p>
                 <span class="tag novo">Novo</span>
                 <a href="candidatura.html" class="btn-candidatar">Candidatar-se</a>
             </div>
-            <div class="vaga" data-categoria="marketing">
-                <h3>Analista de Marketing</h3>
-                <p><strong>Empresa:</strong> Creative Agency</p>
-                <p><strong>Localização:</strong> Rio de Janeiro, RJ</p>
-                <p><strong>Salário:</strong> R$ 3.500,00</p>
-                <p>Planejamento de campanhas digitais e análise de métricas. Conhecimento em Google Ads é um diferencial.</p>
+            <div class="vaga" data-categoria="vendas">
+                <h3>Executivo de Vendas</h3>
+                <p><strong>Empresa:</strong> Comercial SP</p>
+                <p><strong>Localização:</strong> Centro, São Paulo</p>
+                <p><strong>Salário:</strong> R$ 4.200,00 + comissão</p>
+                <p>Atendimento a clientes corporativos e fechamento de negócios. Experiência em B2B.</p>
+                <span class="tag urgente">Urgente</span>
+                <a href="candidatura.html" class="btn-candidatar">Candidatar-se</a>
+            </div>
+            <div class="vaga" data-categoria="saude">
+                <h3>Enfermeiro(a) Plantonista</h3>
+                <p><strong>Empresa:</strong> Hospital Paulistano</p>
+                <p><strong>Localização:</strong> Vila Mariana, São Paulo</p>
+                <p><strong>Salário:</strong> R$ 6.800,00</p>
+                <p>Plantões 12x36. Necessário registro no COREN-SP.</p>
                 <a href="candidatura.html" class="btn-candidatar">Candidatar-se</a>
             </div>
             <div class="vaga" data-categoria="administrativo">
-                <h3>Assistente Administrativo</h3>
-                <p><strong>Empresa:</strong> Empresa XYZ</p>
-                <p><strong>Localização:</strong> Belo Horizonte, MG</p>
-                <p><strong>Salário:</strong> Não informado</p>
-                <p>Suporte em rotinas administrativas e atendimento ao cliente.</p>
-                <span class="tag urgente">Urgente</span>
+                <h3>Assistente Financeiro</h3>
+                <p><strong>Empresa:</strong> Grupo Financeiro SP</p>
+                <p><strong>Localização:</strong> Itaim Bibi, São Paulo</p>
+                <p><strong>Salário:</strong> R$ 3.900,00</p>
+                <p>Contas a pagar/receber e conciliação bancária. Conhecimento em SAP é diferencial.</p>
                 <a href="candidatura.html" class="btn-candidatar">Candidatar-se</a>
             </div>
         </div>
@@ -74,7 +83,7 @@
     <!-- Seção Sobre -->
     <section id="sobre" class="container">
         <h2>Sobre Nós</h2>
-        <p>Somos a Vagas Brasil, uma plataforma dedicada a conectar profissionais às melhores oportunidades de emprego no Brasil. Confira todas as vagas disponíveis em nossa página dedicada!</p>
+        <p>Somos a Vagas São Paulo, plataforma especializada em conectar profissionais às melhores oportunidades de emprego na capital paulista. Focamos exclusivamente no mercado de trabalho de São Paulo.</p>
     </section>
 
     <!-- Seção Contato -->
@@ -89,7 +98,7 @@
     </section>
 
     <footer>
-        <p>© 2025 Vagas Brasil. Todos os direitos reservados.</p>
+        <p>© 2025 Vagas São Paulo. Todos os direitos reservados.</p>
     </footer>
 
     <script>
@@ -118,7 +127,6 @@
             e.target.reset();
         });
 
-        // Função para abrir/fechar o menu hambúrguer
         function toggleMenu() {
             const menu = document.querySelector('.menu');
             menu.classList.toggle('active');

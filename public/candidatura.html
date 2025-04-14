@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candidatura - Vagas Brasil</title>
+    <title>Candidatura - Vagas São Paulo</title>
     <link rel="stylesheet" href="candidatura.css">
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
 
         .modal-content h3 {
             margin-top: 0;
-            color: #333;
+            color: #2c3e50;
         }
 
         .modal-content p {
@@ -56,21 +56,21 @@
         }
 
         .info-link {
-            color: #007bff;
+            color: #e74c3c;
             cursor: pointer;
             text-decoration: underline;
             margin-left: 0.5rem;
         }
 
         .info-link:hover {
-            color: #0056b3;
+            color: #c0392b;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Vagas Brasil</h1>
+            <h1>VAGAS SÃO PAULO</h1>
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -101,12 +101,18 @@
             
             <div class="form-group">
                 <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
+                <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
             </div>
             
             <div class="form-group">
                 <label for="cpf">CPF:</label>
                 <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
+            </div>
+            
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required placeholder="00000-000">
+                <p class="description">Informe seu CEP para verificar a distância até o local de trabalho</p>
             </div>
             
             <div class="form-group">
@@ -146,6 +152,11 @@
                 <input type="file" id="rg-verso" name="rg_verso" accept=".pdf,.jpg,.jpeg,.png" required>
             </div>
             
+            <div class="form-group checkbox">
+                <input type="checkbox" id="concorda-termos" name="concorda_termos" required>
+                <label for="concorda-termos">Concordo com os <a href="#" class="termos-link">Termos de Uso</a> e <a href="#" class="termos-link">Política de Privacidade</a></label>
+            </div>
+            
             <button type="submit" class="btn">Enviar Candidatura</button>
         </form>
     </section>
@@ -165,11 +176,14 @@
                 <li>Não envie fotos desfocadas, escuras ou com partes do documento cortadas.</li>
                 <li>Formatos aceitos: PDF, JPG ou PNG. Tamanho máximo: 5MB.</li>
             </ul>
+            <p class="modal-note">
+                <strong>Nota:</strong> Documentos emitidos no estado de São Paulo têm prioridade no processo seletivo.
+            </p>
         </div>
     </div>
 
     <footer>
-        <p>© 2025 Vagas Brasil. Todos os direitos reservados.</p>
+        <p>© 2025 Vagas São Paulo. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script-candidatura.js"></script>
@@ -190,6 +204,12 @@
                 modal.style.display = 'none';
             }
         };
+
+        // Função para abrir/fechar o menu hambúrguer
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
     </script>
 </body>
 </html>

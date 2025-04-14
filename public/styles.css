@@ -1,13 +1,13 @@
 :root {
-    --primary: #2563eb;
-    --primary-dark: #1d4ed8;
-    --secondary: #f59e0b;
-    --success: #10b981;
-    --success-dark: #059669;
-    --dark: #1e293b;
-    --light: #f8fafc;
-    --gray: #94a3b8;
-    --gray-light: #e2e8f0;
+    --primary: #2c3e50; /* Azul mais escuro - remete à bandeira de SP */
+    --primary-dark: #1a252f;
+    --secondary: #e74c3c; /* Vermelho - cor da bandeira de SP */
+    --success: #27ae60;
+    --success-dark: #219653;
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+    --gray: #95a5a6;
+    --gray-light: #dfe6e9;
 }
 
 * {
@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Alinhado com a página inicial */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: var(--dark);
     background-color: var(--light);
@@ -44,6 +44,7 @@ header h1 {
     font-size: 2rem;
     font-weight: 800;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 /* Hamburger Menu */
@@ -111,18 +112,23 @@ nav a:hover {
     color: white;
     padding: 60px 0;
     text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sp-skyline.jpg'); /* Adicione uma imagem do skyline de SP */
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-content h2 {
     font-size: 2.5rem;
     color: white;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 20px;
     color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .hero-content input {
@@ -146,7 +152,7 @@ nav a:hover {
 }
 
 .btn-buscar:hover {
-    background-color: #d97706;
+    background-color: #c0392b;
     transform: translateY(-2px);
 }
 
@@ -160,7 +166,7 @@ nav a:hover {
 }
 
 .link-todas-vagas:hover {
-    color: #d97706;
+    color: #c0392b;
 }
 
 /* Vagas Section */
@@ -265,6 +271,7 @@ h2::after {
     margin: 0 auto;
     color: var(--gray);
     font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 /* Contato Section */
@@ -386,4 +393,16 @@ footer {
     .vaga {
         padding: 15px;
     }
+}
+
+/* Elementos específicos para SP */
+.local-sp {
+    display: inline-block;
+    background-color: #f1f2f6;
+    color: var(--primary);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-left: 5px;
 }
